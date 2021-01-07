@@ -1,13 +1,73 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway&display=swap');
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  width: 89%;
+  margin: 3rem auto;
+}
+
+.title{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 3rem;
+}
+
+.booklist{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+.book{
+  margin-right: 45px;
+}
+
+.book:last-child{
+  margin-right: 0;
+}
+
+.book__title {
+  font-family: 'Poppins',sans-serif;
+  font-size: 16px;
+  color: #0961e6;
+  margin: 15px 0;
+}
+
+.book__image {
+      position: relative;
+      left: -29px;
+}
+
+.btn-info{
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.book__author {
+  font-family: 'Raleway',sans-serif;
+  font-weight: lighter;
+  color:#a74804;
+  letter-spacing: 3px;
+}
+
+@media(max-width:768px){
+  .booklist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media(max-width:425px) {
+  .booklist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
